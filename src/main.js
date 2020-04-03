@@ -8,6 +8,7 @@
 
   /**
    * меню
+   * @return{html} возращает разметку
    */
   const createSiteMenuTemplate = () => {
     return (
@@ -44,6 +45,7 @@
 
   /**
    * Фильтры;
+   * @return{html} возращает разметку
    */
   const createFilterTemplate = () => {
     return (
@@ -111,6 +113,7 @@
 
   /**
    * сортировка
+   * @return{html} возращает разметку
    */
   const createBoardTemplate = () => {
     return (
@@ -127,6 +130,7 @@
   };
   /**
    * шаблон карточки
+   * @return{html} возращает разметку
    */
   const createTaskTemplate = () => {
     return (
@@ -177,6 +181,7 @@
   };
   /**
    * Форма создания/редактирования задачи
+   * @return{html} возращает разметку
    */
   const createTaskEditTemplate = () => {
     return (
@@ -381,6 +386,7 @@
   };
   /**
    * кнопка
+   * @return{html} возращает разметку
    */
   const createLoadMoreButtonTemplate = () => {
     return (
@@ -416,7 +422,7 @@
   const taskListElement = siteMainElement.querySelector(`.board__tasks`);
   const boardElement = siteMainElement.querySelector(`.board`);
 
-  render(taskListElement, createTaskEditTemplate(), 'afterbegin');
+  render(taskListElement, createTaskEditTemplate(), `afterbegin`);
 
   for (let i = 0; i < TASK_COUNT; i++) {
     render(taskListElement, createTaskTemplate(), `beforeend`);
